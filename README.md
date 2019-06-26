@@ -1,5 +1,5 @@
-# Bot
-This a basic bot template bot for Discord.
+# Tilt Bot
+This a Tilt Bot for Discord.
 
 ## Installation
 Run the following code to install node modules
