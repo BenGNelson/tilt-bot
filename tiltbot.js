@@ -7,7 +7,7 @@ const bot = new Discord.Client()
 const token = config.token
 
 const tiltCalls = ['!tilt', '!tilted']
-const tiltFunctions = ['add', 'balance', 'balances', 'reset']
+const tiltFunctions = ['add', 'balance', 'balances', 'reset', 'help']
 
 // Basic bot response on message
 bot.on('message', function(message)
@@ -49,6 +49,18 @@ bot.on('message', function(message)
                             let resetName = messageContent.slice(12)
                             message.channel.send(Players.resetPlayer(resetName));
                             return
+
+                        // Tilt help message
+                        case 'help':
+                            message.channel.send({embed: {
+                                color: 3447003,
+                                title: 'Tilt Bot Options:',
+                                fields: [
+                                { name: 'Command', value: '!add\n!balance <name>\n!balances\n!reset <name>', inline: true},
+                                { name: 'Description', value: 'Adds a new player\nReturns a player\'s balance\nShows all player balances\nResets a player\'s balance to zero', inline: true},
+                                ]
+                            }
+                            });
                         }
 
                 } else {
