@@ -45,7 +45,7 @@ const getPlayerBalance = (name) => {
     if (player) {
         return `Balance: ${player.balance}`
     } else {
-        return 'Player does not exists!'
+        return 'Player does not exist!'
     }
 }
 
@@ -66,7 +66,7 @@ const gotTilted = (name) => {
         savePlayers(players)
         return `${player.name} is tilted! Their new balance is ${player.balance}!`
     } else {
-        return 'Player does not exists'
+        return 'Player does not exist!'
     }
 }
 
@@ -80,7 +80,7 @@ const resetPlayer = (name) => {
         savePlayers(players)
         return `${player.name} has paid up! Their new balance is ${player.balance}`
     } else {
-        return 'Player does not exists'
+        return 'Player does not exist!'
     }
 }
 

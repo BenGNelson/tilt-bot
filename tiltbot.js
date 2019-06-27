@@ -54,13 +54,14 @@ bot.on('message', function(message)
                         case 'help':
                             message.channel.send({embed: {
                                 color: 3447003,
-                                title: 'I\'m in beta still. Please be nice!\nTilt Bot Options:',
+                                title: 'I\'m still in beta, so please be nice!\nTilt Bot Options:',
                                 fields: [
                                 { name: 'Command', value: '!add\n!balance <name>\n!balances\n!reset <name>', inline: true},
                                 { name: 'Description', value: 'Adds a new player\nReturns a player\'s balance\nShows all player balances\nResets a player\'s balance to zero', inline: true},
                                 ]
                             }
                             })
+                            return
                         }
 
                 } else {
