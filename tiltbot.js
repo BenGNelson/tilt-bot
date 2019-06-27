@@ -30,48 +30,48 @@ bot.on('message', function(message)
                         // Add a player
                         case 'add':
                             let addName = messageContent.slice(10)
-                            message.channel.send(Players.addPlayer(addName));
+                            message.channel.send(Players.addPlayer(addName))
                             return
 
                         // Check a player's balance
                         case 'balance':
                             let balanceName = messageContent.slice(14)
-                            message.channel.send(Players.getPlayerBalance(balanceName));
+                            message.channel.send(Players.getPlayerBalance(balanceName))
                             return
 
                         // Check all player balances
                         case 'balances':
-                            message.channel.send(Players.getAllBalances());
+                            message.channel.send(Players.getAllBalances())
                             return
 
                         // Reset all balances
                         case 'reset':
                             let resetName = messageContent.slice(12)
-                            message.channel.send(Players.resetPlayer(resetName));
+                            message.channel.send(Players.resetPlayer(resetName))
                             return
 
                         // Tilt help message
                         case 'help':
                             message.channel.send({embed: {
                                 color: 3447003,
-                                title: 'Tilt Bot Options:',
+                                title: 'I\'m in beta still. Please be nice!\nTilt Bot Options:',
                                 fields: [
                                 { name: 'Command', value: '!add\n!balance <name>\n!balances\n!reset <name>', inline: true},
                                 { name: 'Description', value: 'Adds a new player\nReturns a player\'s balance\nShows all player balances\nResets a player\'s balance to zero', inline: true},
                                 ]
                             }
-                            });
+                            })
                         }
 
                 } else {
                     // Tilt function is valid
-                    message.channel.send('Beep boop. Command not reconginzed.');
+                    message.channel.send('Beep boop. Command not reconginzed.')
                 }
 
             // !tilted
             case '!tilted':
                 let playerName = messageContent.slice(8)
-                message.channel.send(Players.gotTilted(playerName));
+                message.channel.send(Players.gotTilted(playerName))
                 return
         }
     }
@@ -79,7 +79,7 @@ bot.on('message', function(message)
 
 bot.on('ready', function(){
     console.log('Bot launched...')
-    bot.user.setActivity('SMITE');
+    bot.user.setActivity('SMITE')
 })
 
 bot.login(token)
