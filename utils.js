@@ -4,7 +4,7 @@ const incAmount = 2
 
 const savePlayers = (players) => {
     const dataJSON = JSON.stringify(players)
-    fs.writeFileSync('players.json', dataJSON)
+    fs.writeFileSync('data/players.json', dataJSON)
 }
 
 const addPlayer = (name) => {
@@ -28,7 +28,7 @@ const addPlayer = (name) => {
 const loadPlayers = () => {
     try {
         // Read players
-        const dataBuffer = fs.readFileSync('players.json')
+        const dataBuffer = fs.readFileSync('data/players.json')
         const playerJSON = dataBuffer.toString()
         return JSON.parse(playerJSON)
     } catch (e) {

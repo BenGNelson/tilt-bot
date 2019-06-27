@@ -1,12 +1,12 @@
 {
-  "name": "discord.bot-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "tilt-bot",
+  "version": "0.5.0",
+  "description": "This is a Tilt Bot for Discord",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Insert AUTHOR NAME",
+  "author": "Ben Nelson",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2"
