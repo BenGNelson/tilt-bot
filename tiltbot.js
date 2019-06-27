@@ -12,7 +12,8 @@ const tiltFunctions = ['add', 'balance', 'balances', 'reset']
 // Basic bot response on message
 bot.on('message', function(message)
 {
-    const messageArray = message.split(' ')
+    const messageContent = message.content
+    const messageArray = messageContent.split(' ')
     const tiltCall = messageArray[0]
     const tiltCommand = messageArray[1]
 
@@ -28,13 +29,13 @@ bot.on('message', function(message)
                     switch(tiltCommand){
                         // Add a player
                         case 'add':
-                            let addName = command.slice(10)
+                            let addName = messageContent.slice(10)
                             message.channel.send(Players.addPlayer(addName));
                             return
 
                         // Check a player's balance
                         case 'balance':
-                            let balanceName = command.slice(14)
+                            let balanceName = messageContent.slice(14)
                             message.channel.send(Players.getPlayerBalance(balanceName));
                             return
 
@@ -45,7 +46,7 @@ bot.on('message', function(message)
 
                         // Reset all balances
                         case 'reset':
-                            let resetName = command.slice(12)
+                            let resetName = messageContent.slice(12)
                             message.channel.send(Players.resetPlayer(resetName));
                             return
                         }
@@ -57,7 +58,7 @@ bot.on('message', function(message)
 
             // !tilted
             case '!tilted':
-                let playerName = command.slice(8)
+                let playerName = messageContent.slice(8)
                 message.channel.send(Players.gotTilted(playerName));
                 return
         }
