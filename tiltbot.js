@@ -56,7 +56,7 @@ bot.on('message', function(message)
                                 color: 3447003,
                                 title: 'I\'m still in beta, so please be nice!\nTilt Bot Options:',
                                 fields: [
-                                { name: 'Command', value: '!add\n!balance <name>\n!balances\n!reset <name>', inline: true},
+                                { name: 'Command', value: '!add <name>\n!balance <name>\n!balances\n!reset <name>', inline: true},
                                 { name: 'Description', value: 'Adds a new player\nReturns a player\'s balance\nShows all player balances\nResets a player\'s balance to zero', inline: true},
                                 ]
                             }
