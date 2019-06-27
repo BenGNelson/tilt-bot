@@ -8,16 +8,17 @@ npm install
 ```
 
 ## Configuration
-After install, create two files in your data folder
+After install, create a directory in the root of the repo called "data"
+Within data add two .json files
 
- One called config.json with your bot token
+Add config.json with your bot token
 ```
 {
     "token": "YOUR TOKEN GOES HERE"
 }
 ```
 
-and one  called players.json with an empty array
+Add players.json with an empty array
 ```
 []
 ```
